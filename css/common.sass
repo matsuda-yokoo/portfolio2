@@ -1,0 +1,317 @@
+// 全体に関するデザイン
+
+body
+  background-color: rgb(236, 236, 236)
+  font-family: 'Meiryo','Yu Gothic Medium','メイリオ','Yu Gothic','MS ゴシック','游ゴシック Medium',sans-serif
+
+a
+  color: inherit
+  text-decoration: none
+
+  &:hover, &:visited
+    color: inherit
+    text-decoration: none
+
+ul
+  list-style: none
+
+.wrapper
+  max-width: 1000px
+  margin: 0 auto 130px auto
+  font-size: 0.9rem
+  padding: 0
+
+.sec-title
+  margin-top: 100px
+  display: flex
+  flex-flow: column
+  position: relative
+  font-weight: 100
+
+.title1
+  font-size: 40px
+  letter-spacing: 7px
+
+.title2
+  font-size: 13px
+  padding-bottom: 50px
+
+.sec-title::after
+  content: ' '
+  display: block
+  position: absolute
+  left: 0
+  transform: translate(0%)
+  bottom: 20px
+  width: 40px
+  height: 1px
+  background-color: black
+
+// header
+
+#header
+  width: 100%
+  height: 80px
+  display: flex
+  align-items: center
+
+  .inner
+    margin: 0 auto
+    text-align: center
+
+  h1
+    font-size: 40px
+    font-weight: 100
+    letter-spacing: 7px
+    height: 70px
+    font-family: 'Meiryo'
+    display: flex
+    align-items: center
+
+  div
+    display: flex
+    align-items: center
+
+  .index a
+    margin-left: 20px
+    font-size: 13px
+
+  .contact
+    height: 80px
+    margin: 0px 0px 0px auto
+    background-color: black
+    color: aliceblue
+    padding: 25px 40px 25px
+    font-size: 13px
+
+// mainvisual
+
+.mainvisual img
+  width: 100%
+  height: calc(100vh - 80px)
+  object-fit: cover
+
+// news
+
+#news
+  .list
+    display: flex
+    margin-top: 20px
+
+    li
+      width: calc(100% / 3)
+      padding: 12px
+
+      &:nth-child(2), &:last-child
+        border-left: 1px solid #000000
+
+  .date
+    display: inline-block
+    padding-bottom: 12px
+
+  .category
+    margin-left: 10px
+    background-color: #000000
+    color: aliceblue
+    padding: 3px
+    font-size: 0.7rem
+
+// about
+
+#about
+  display: flex
+
+  .content
+    margin: 80px
+    overflow-wrap: normal
+
+  .maincontent
+    margin-top: 20px
+
+// business
+
+#business
+  .contents
+    display: flex
+    margin-top: 20px
+
+  .contents1
+    margin: 80px 0 0 50px
+
+  .contents2
+    margin-left: 50px
+
+// company
+
+#company
+  position: relative
+
+  .contents
+    width: 600px
+    background-color: white
+    padding: 10px 10px 120px 60px
+
+  .img
+    position: absolute
+    top: 100px
+    right: 20px
+    object-fit: cover
+
+  .detail
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+
+  dt
+    width: 20%
+    padding-bottom: 10px
+
+  dd
+    width: 80%
+
+// footer
+
+#footer
+  background-color: white
+  height: 200px
+
+.footer
+  width: 1000px
+  display: flex
+  padding: 30px 0
+
+#footer
+  .logo
+    font-size: 40px
+    letter-spacing: 7px
+    padding: 5px
+
+  .contents
+    font-size: 14px
+    margin: auto 0 auto auto
+
+  .signature
+    vertical-align: bottom
+    text-align: left
+
+//ここからスマートフォン仕様
+@media screen and (max-width: 900px)
+  // 全体に関するデザイン
+
+  body
+    position: relative
+    padding-bottom: 114px
+    min-height: 100vh
+
+  .wrapper
+    max-width: 900px
+    margin: 0 15px 30px 15px
+    font-size: 0.9rem
+    padding: 0
+
+  // header
+
+  #header
+    display: flex
+    align-items: center
+
+    h1
+      margin: 10px 0px 0px 10px
+      height: 50px
+
+    .index
+      margin: 0px 0px 0px 10px
+
+  // mainvisual
+
+  #mainvisual .mainvisual
+    width: 900px
+
+  // news
+
+  #news .list
+    display: block
+
+    li
+      &:nth-child(2), &:last-child
+        border-left: none
+        margin-top: 20px
+
+  // about
+
+  #about
+    display: block
+
+    .content
+      margin: 15px
+
+    .contents
+      padding: 12px
+      margin-right: 200px
+
+  // business
+
+  #business
+    .contents
+      display: block
+
+    .contents1, .contents2
+      margin: 0px
+
+    dd
+      text-align: center
+
+    dt
+      margin: 10px
+
+    img
+      width: 760px
+      height: 480px
+
+  // company
+
+  #company
+    .contents
+      width: 825px
+      margin: 15px
+      text-align: left
+      padding: 40px
+
+    .wrapper
+      margin-bottom: 0px
+
+    .sec-title
+      margin-top: 0
+
+    .detail
+      display: block
+
+    dt
+      padding-bottom: 4px
+
+    dd
+      margin-left: 10px
+      margin-bottom: 18px
+
+    .img
+      position: static
+      margin: 15px
+
+    img
+      width: 825px
+      height: 500px
+
+  // footer
+
+  #footer
+    .wrapper
+      margin: 0
+      padding-left: 15px
+      background-color: white
+
+    background-color: white
+    height: 200px
+    width: 100%
+    position: absolute
+    left: 0
+    bottom: 0
